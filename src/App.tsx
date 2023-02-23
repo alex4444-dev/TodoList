@@ -33,6 +33,7 @@ function App() {
   let [filter, setFilter] = useState<FilterValuesType>("all");
 
   let tasksForTodoList = tasks;
+  
 
   
 
@@ -61,6 +62,7 @@ function App() {
       />
       
     </div>
+    
   );
 }
 

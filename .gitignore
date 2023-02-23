@@ -2,6 +2,7 @@
 
 # directories
 /.vscode
+
 # dependencies
 /node_modules
 /.pnp
@@ -23,3 +24,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
