@@ -58,6 +58,8 @@ export const Todolist = React.memo(function (props: PropsType) {
     tasksForTodolist = props.tasks.filter(t => t.isDone === true)
   }
 
+
+
   return <div>
     <h3> <EditableSpan value={props.title} onChange={changeTodolistTitle} />
       <IconButton onClick={removeTodolist}>
@@ -66,14 +68,14 @@ export const Todolist = React.memo(function (props: PropsType) {
     <AddItemForm addItem={addTask} />
     <div>
       {
-        props.tasks.map(t => <Task 
-        task={t}
-        changeTaskStatus={props.changeTaskStatus}
-        changeTaskTitle={props.changeTaskTitle}
-        removeTask={props.removeTask}
-        todolistId={props.id}
-        key={t.id}
-      />)
+        tasksForTodolist.map((t) => <Task
+          task={t}
+          changeTaskStatus={props.changeTaskStatus}
+          changeTaskTitle={props.changeTaskTitle}
+          removeTask={props.removeTask}
+          todolistId={props.id}
+          key={t.id}
+        />)
       }
     </div>
     <div>
